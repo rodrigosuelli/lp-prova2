@@ -1,0 +1,16 @@
+{
+  "C boilerplate": {
+    "prefix": "boilerplate",
+    "body": [
+      "#include <stdio.h>\n",
+      "#include \"get_input.h\"\n",
+      "int main()",
+      "{",
+      "\t$0",
+      "\treturn 0;",
+      "}",
+      ""
+    ],
+    "description": "Write boilerplate code for .c files"
+  }
+}
