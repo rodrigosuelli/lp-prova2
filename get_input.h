@@ -1,8 +1,6 @@
 #ifndef GET_INPUT_H_INCLUDED
 #define GET_INPUT_H_INCLUDED
 
-char *get_string(char message[]);
-
 int get_int(char message[]);
 
 int get_unsigned_int(char message[]);

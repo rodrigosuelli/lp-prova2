@@ -6,7 +6,7 @@
 typedef struct
 {
   int matricula;
-  char *respostas;
+  char respostas[50];
   int pontos;
 } candidato;
 
@@ -41,21 +41,22 @@ int main()
     } while (matricula > NUMERO_MAX_MATRICULAS); // limitar matricula em 5 digitos
 
     // Recebe respostas
-    char *respostas;
+    char respostas[QTD_RESPOSTAS];
     do
     {
       puts("Exemplo: abcdeedcbaabcdeedcbaabcdeedcbaabcdeedcbaabcdeedcba");
-      respostas = get_string("Insira as respostas:");
-    } while (((int)strlen(respostas) - 1) != QTD_RESPOSTAS); // verificar se a resposta tem 50 caracteres
+      puts("Insira as respostas:");
+      scanf("%s", respostas);
 
-    if (((int)strlen(respostas) - 1) != QTD_RESPOSTAS) // verificar se a resposta tem 50 caracteres
-    {
-      puts("Erro, a resposta deve ter 50 caracteres");
-    }
+      if (((int)strlen(respostas)) != QTD_RESPOSTAS) // verificar se a resposta tem 50 caracteres
+      {
+        puts("Erro, a resposta deve ter 50 caracteres");
+      }
+    } while (((int)strlen(respostas)) != QTD_RESPOSTAS); // verificar se a resposta tem 50 caracteres
 
     // Popular o array candidatos
     candidatos[i].matricula = matricula;
-    candidatos[i].respostas = respostas;
+    strcpy(candidatos[i].respostas, respostas);
     candidatos[i].pontos = 0;
   }
 

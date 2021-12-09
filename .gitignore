@@ -1,0 +1,7 @@
+### Ignore executable files without extension (linux)
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/

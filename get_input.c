@@ -2,19 +2,6 @@
 
 #include "get_input.h"
 
-char *get_string(char message[])
-{
-  const int MAX_CHAR_LENGTH = 255;
-
-  puts(message);
-
-  static char user_input[255];
-
-  fgets(user_input, MAX_CHAR_LENGTH, stdin);
-
-  return user_input;
-}
-
 int get_int(char message[])
 {
   int n;
