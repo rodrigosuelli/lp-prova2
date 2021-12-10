@@ -8,7 +8,7 @@ typedef struct
   int matricula;
   char respostas[50];
   int pontos;
-} candidato;
+} Candidato;
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
   puts("================================================================");
   const int QTD_CANDIDATOS = get_positive_int("Insira a quantidade de candidatos:");
 
-  candidato candidatos[QTD_CANDIDATOS];
+  Candidato candidatos[QTD_CANDIDATOS];
 
   // Recebe candidatos
   for (int i = 0; i < QTD_CANDIDATOS; i++)
@@ -91,7 +91,7 @@ int main()
     // Swap smallest item with i'th item
     if (i != max)
     {
-      candidato temp_i = candidatos[i];
+      Candidato temp_i = candidatos[i];
       candidatos[i] = candidatos[max];
       candidatos[max] = temp_i;
     }
