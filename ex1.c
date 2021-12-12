@@ -52,7 +52,7 @@ int main()
     {
       puts("Exemplo: abcdeedcbaabcdeedcbaabcdeedcbaabcdeedcbaabcdeedcba");
       puts("Insira as respostas:");
-      scanf("%s", respostas);
+      scanf("%s", respostas); // scanf does not read strings with spaces
 
       if (((int)strlen(respostas)) != QTD_RESPOSTAS) // verificar se a resposta tem 50 caracteres
       {

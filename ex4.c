@@ -18,11 +18,11 @@ int main()
   {
     if (isalpha(text[i]))
     {
-      text[i] = text[i] + 3;
+      text[i] = text[i] + 3; // desloca caracteres alfabéticos 3 posições para a direita
     }
   }
 
-  // Step 2
+  // Step 2 - Inverte o texto
   for (int i = 0; i < text_length / 2; i++)
   {
     int temp_i = text[i];
@@ -33,7 +33,7 @@ int main()
   // Step 3
   for (int i = text_length / 2; i < text_length; i++)
   {
-    text[i] = text[i] - 1;
+    text[i] = text[i] - 1; // desloca caractere a partir da metade em diante (truncada) uma posição para a esquerda
   }
 
   // Print ciphertext

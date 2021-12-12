@@ -27,7 +27,7 @@ int main(void)
   do
   {
     puts("Insira o primeiro nome do cliente:");
-    scanf("%s", conta.cliente.nome);
+    scanf("%s", conta.cliente.nome);        // scanf does not read strings with spaces
     if ((strlen(conta.cliente.nome)) > 256) // verificar se o nome é maior que 256 caracteres
     {
       puts("Erro, o nome deve ter no máximo 256 caracteres"); // mensagem de erro
@@ -38,7 +38,7 @@ int main(void)
   do
   {
     puts("Insira o cpf do cliente:");
-    scanf("%s", conta.cliente.cpf);
+    scanf("%s", conta.cliente.cpf);        // scanf does not read strings with spaces
     if ((strlen(conta.cliente.cpf)) != 11) // verificar se o cpf tem 11 caracteres
     {
       puts("Erro, o cpf deve ter 11 caracteres"); // mensagem de erro
