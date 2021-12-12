@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "get_input.h"
-
 typedef struct
 {
   int matricula;
@@ -17,7 +15,14 @@ int main()
   const char GABARITO[50] = "abcdeedcbaabcdeedcbaabcdeedcbaabcdeedcbaabcdeedcba";
 
   puts("================================================================");
-  const int QTD_CANDIDATOS = get_positive_int("Insira a quantidade de candidatos:");
+
+  // Recece qtd de candidatos
+  int QTD_CANDIDATOS;
+  do
+  {
+    puts("Insira a quantidade de candidatos:");
+    scanf("%d", &QTD_CANDIDATOS);
+  } while (QTD_CANDIDATOS <= 0);
 
   Candidato candidatos[QTD_CANDIDATOS];
 
@@ -32,13 +37,14 @@ int main()
     do
     {
       puts("Exemplo: 21995");
-      matricula = get_positive_int("Insira o numero de matricula:");
+      puts("Insira o numero de matricula:");
+      scanf("%d", &matricula);
 
       if (matricula > NUMERO_MAX_MATRICULAS)
       {
         puts("Erro, a matricula deve ter no máximo 5 digitos.");
       }
-    } while (matricula > NUMERO_MAX_MATRICULAS); // limitar matricula em 5 digitos
+    } while (matricula > NUMERO_MAX_MATRICULAS || matricula <= 0); // limitar matricula em 5 digitos
 
     // Recebe respostas
     char respostas[QTD_RESPOSTAS];

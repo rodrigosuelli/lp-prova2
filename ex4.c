@@ -2,8 +2,6 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "get_input.h"
-
 int main()
 {
   char text[256];
