@@ -3,8 +3,7 @@
     "prefix": "boilerplate",
     "body": [
       "#include <stdio.h>\n",
-      "#include \"get_input.h\"\n",
-      "int main()",
+      "int main(void)",
       "{",
       "\t$0",
       "\treturn 0;",
