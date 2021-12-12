@@ -26,7 +26,7 @@ int main(void)
   // Recebe nome do cliente
   do
   {
-    puts("Insira o nome do cliente:");
+    puts("Insira o primeiro nome do cliente:");
     scanf("%s", conta.cliente.nome);
     if ((strlen(conta.cliente.nome)) > 256) // verificar se o nome é maior que 256 caracteres
     {
@@ -111,7 +111,7 @@ int main(void)
           {
             conta.saldo -= valor_saque;
           }
-        } while (valor_saque <= 0 || conta.saldo < valor_saque);
+        } while (valor_saque <= 0);
 
         break;
       case 3:
