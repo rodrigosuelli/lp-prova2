@@ -30,7 +30,7 @@ int main()
     text[text_length - i - 1] = temp_i;
   }
 
-  // // // Step 3
+  // Step 3
   for (int i = text_length / 2; i < text_length; i++)
   {
     text[i] = text[i] - 1;
