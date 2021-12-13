@@ -22,7 +22,7 @@ int main()
     }
   }
 
-  // Step 2 - Inverte o texto
+  // Step 2 - Inverte o texto - strrev()
   for (int i = 0; i < text_length / 2; i++)
   {
     int temp_i = text[i];
