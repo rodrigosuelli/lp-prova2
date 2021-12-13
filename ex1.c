@@ -30,7 +30,7 @@ int main()
   for (int i = 0; i < QTD_CANDIDATOS; i++)
   {
     puts("----------------------------------------------------------------");
-    printf("Dados do candidato número %d:\n", i + 1);
+    printf("Dados do candidato numero %d:\n", i + 1);
 
     // Recebe matricula
     int matricula;
@@ -42,7 +42,7 @@ int main()
 
       if (matricula > NUMERO_MAX_MATRICULAS)
       {
-        puts("Erro, a matricula deve ter no máximo 5 digitos.");
+        puts("Erro, a matricula deve ter no maximo 5 digitos.");
       }
     } while (matricula > NUMERO_MAX_MATRICULAS || matricula <= 0); // limitar matricula em 5 digitos
 
@@ -71,7 +71,6 @@ int main()
   // Calcular pontos
   for (int i = 0; i < QTD_CANDIDATOS; i++)
   {
-    // printf("%s", candidatos[i].respostas);
     for (int j = 0; j < QTD_RESPOSTAS; j++)
     {
       if (candidatos[i].respostas[j] == GABARITO[j])
@@ -106,7 +105,7 @@ int main()
   // Exibir resultados
   for (int i = 0; i < QTD_CANDIDATOS; i++)
   {
-    puts("Matrícula | Pontuação");
+    puts("Matricula | Pontuacao");
     printf("%d          |     %d\n", candidatos[i].matricula, candidatos[i].pontos);
   }
 

@@ -30,7 +30,7 @@ int main(void)
     scanf("%s", conta.cliente.nome);        // scanf does not read strings with spaces
     if ((strlen(conta.cliente.nome)) > 256) // verificar se o nome é maior que 256 caracteres
     {
-      puts("Erro, o nome deve ter no máximo 256 caracteres"); // mensagem de erro
+      puts("Erro, o nome deve ter no maximo 256 caracteres"); // mensagem de erro
     }
   } while ((strlen(conta.cliente.nome)) > 256); // loop se o nome for maior que 256 caracteres
 
@@ -52,20 +52,20 @@ int main(void)
     // Printar dados da conta
     puts("=====================");
     printf("Bem vindo, %s\n", conta.cliente.nome);
-    printf("Número da conta: %d\n", conta.numero_da_conta);
+    printf("Numero da conta: %d\n", conta.numero_da_conta);
     printf("Saldo: R$ %.2f\n", conta.saldo);
     puts("=====================");
 
     // Printar operações
     puts("Operações disponíveis:");
-    puts("1. Depósito");
+    puts("1. Deposito");
     puts("2. Saque");
     puts("3. Sair");
     puts("Insira a operacao desejada:");
     scanf("%d", &operacao);
     if (operacao != 1 && operacao != 2 && operacao != 3)
     {
-      puts("Erro, operação inválida."); // mensagem de erro
+      puts("Erro, operação invalida."); // mensagem de erro
     }
     else
     {
@@ -73,12 +73,12 @@ int main(void)
       switch (operacao)
       {
       case 1:
-        puts("Depósito");
+        puts("Deposito");
         // Recebe valor de deposito
         int valor_deposito;
         do
         {
-          puts("Insira o valor que deseja depósitar:");
+          puts("Insira o valor que deseja depositar:");
           scanf("%d", &valor_deposito);
           if (valor_deposito <= 0)
           {
@@ -119,7 +119,7 @@ int main(void)
         puts("Tchau Tchau!");
         break;
       default:
-        puts("Operação inválida!");
+        puts("Operação invalida!");
         break;
       }
     }
